@@ -12,7 +12,7 @@ if (isset($_POST["title"]) && isset($_POST["des"]) && isset($_POST["price"]) && 
     move_uploaded_file($_FILES["image"]["tmp_name"], "img/".$i);
     $image = "img/".$i;
 
-    $sql = "INSERT INTO `product` (`Image`, `Title`, `Des`, `Price`, `Price1`) VALUES ( '$image', '$t', '$d', '$p', '$p1');";
+    $sql = "INSERT INTO `new` (`Image`, `Title`, `Des`, `Price`, `Price1`) VALUES ( '$image', '$t', '$d', '$p', '$p1');";
 
     mysqli_query($conn, $sql);
 header("location: index.php");

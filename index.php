@@ -264,29 +264,33 @@
                  <a href="https://fb.watch/pHCqIjJFGR/" class="button1">المزيد</a>
                 </div>
               </div>
+
+              <!------------ ******* Table Names and  columns ***** --------- -->
               <?php
                 include "db1.php";
-                $sql = "SELECT * FROM `product`;";
+                $sql = "SELECT * FROM `new`;";
                 $result = mysqli_query($conn, $sql);
 
 
                 while($row = mysqli_fetch_assoc($result)) {?>
 
                 <div class="slide swiper-slide">
-                <img src="<?php echo $row["Image"]?>" alt="" class="image" />
+                <img src="<?php echo $row["image"]?>" alt="" class="image" />
                 <div class="image-data">
-                  <h2 class="text"><?php echo $row["Title"]?></h2>
+                  <h2 class="text"><?php echo $row["title"]?></h2>
                   <p>
                     <br />
                   </p>
-                  <a href="<?php echo $row["Price"]?>" class="button">ميديا</a>
-                  <a href="<?php echo $row["Price1"]?>" class="button1">المزيد</a>
+                  <a href="<?php echo $row["price"]?>" class="button">ميديا</a>
+                  <a href="<?php echo $row["price1"]?>" class="button1">المزيد</a>
                 </div>
               </div>
 
                 <?php
                 }
                 ?>
+             <!---------------------------------------------------------- -->
+
               <div class="slide swiper-slide">
                 <img src="cover-slidegdftgdfgdf.png" alt="" class="image" />
                 <div class="image-data">
